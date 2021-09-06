@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,200;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 300px;
+    background:rgba(142, 135, 240, 0.24) ;
+}
+.sidebar .logo-detail {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.sidebar .logo-detail i {
+    font-size: 30px;
+    color: saddlebrown;
+    
+    height: 50px;
+    min-width: 78px;
+    text-align: center;
+    line-height: 50px;
+}
+.sidebar .logo-detail .logo-name {
+    font-size: 22px;
+    color: saddlebrown;
+    font-weight: 600;
+}
+.sidebar .nav-links {
+    
+    height: 100%;
+    padding-top: 25px;
+}
+.sidebar .nav-links li {
+    list-style: none;
+    position: relative;
+    transition: all 0.4s ease;
+}
+.sidebar .nav-links li:hover{
+    background: #1d1b31;
+}
+.sidebar .nav-links .icon_link{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sidebar .nav-links li i {
+    height: 50px;
+    min-width: 50px;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    font-size: 20px;
+}
+.sidebar .nav-links li a {
+    text-decoration: none;
+}
+.sidebar .nav-links li a .link_name {
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+}
+.sidebar .nav-links li .sub_menu{
+    padding: 6px 6px 14px 60px;
+    margin-top: -10px;
+    background: rgba(142, 135, 240, 0.24);
+   /* display: none;*/
+}
+.sidebar .nav-links li .sub_menu a{
+    color: #fff;
+    font-size: 15px;
+    padding: 5px 0;
+    white-space: nowrap;
+    opacity: 0.6;
+    transition: all 0.3 ease;
+}
+.sidebar .nav-links li .sub_menu a:hover{
+    opacity: 1;
+}
+.sidebar.close .nav-links li .sub_menu{
+    position: absolute;
+    left: 100%;
+    top: -10px;
+    margin-top: 0;
+    padding: 10px 20px;
+    border-radius: 0 6px 6px 0;
+    transition: all 0.4s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+.sidebar.close .nav-links li:hover .sub_menu{
+    top: 0px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.sidebar .nav-links li .sub_menu .link_name{
+    display: none;
+}
+.sidebar.close .nav-links li .sub_menu .link_name{
+    font-size: 18px;
+    opacity: 1;
+    display: block;
+}
