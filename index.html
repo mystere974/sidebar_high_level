@@ -9,11 +9,12 @@
     <title>SideBar Menu</title>
 </head>
 <body>
-    <div class="sidebar close">
+    <div class="sidebar">
         <div class="logo-detail">
             <i class='bx bx-buildings'></i>
             <span class="logo-name">Side Bar level 2</span>
         </div>
+        <i class='bx bx-menu' id="btn"></i>
         <ul class="nav-links">
             <li>
                 <a href="#">
@@ -120,15 +121,28 @@
                 <div class="profile-content">
                     <img src="image/profile.jpg" alt="moi">
                 </div>
-                <li>
                     <div class="name-job">
                         <div class="profile-name">Loghann MUSSARD</div>
-                        <div class="job">Dev web front/back junior</div>
+                        <div class="job">Dev web FullStack JS junior</div>
                     </div>
                     <i class='bx bx-log-out'></i>
                 </div>
-            </li>
-        </ul>
-    </div>
+            </ul>
+        </div>
+        <div class="home-content">
+            <div class="text">home content</div>
+        </div>
+
+<script>
+    let btn = document.querySelector('#btn');
+    let sidebar = document.querySelector('.sidebar');
+    
+    btn.onclick = function() {
+        sidebar.classList.toggle("active");
+    }
+
+    
+</script>
+
 </body>
 </html>
